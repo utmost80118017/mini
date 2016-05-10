@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>米築</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+	<link rel="shortcut icon" href="/favicon.ico">	 
 	<meta property="og:title" content="{{$people->name}}"></meta>
 	<meta property="og:type" content="地產動態"></meta>
 	<meta property="og:url" content="{{Request::url()}}"></meta>

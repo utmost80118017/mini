@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>米築</title>
+	<link rel="shortcut icon" href="/favicon.ico">	 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	@if($cases->count()!=0)
 		<meta property="og:title" content="{{$cases[0]->title}}"></meta>
@@ -105,7 +106,7 @@
 
     <aside class="clearfix">
 			@if($cases->count()!=0)
-			
+
 				@foreach($cases as $case)
         <div class="case">
             <div class="casePic">

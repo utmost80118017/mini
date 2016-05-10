@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>米築</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+	<link rel="shortcut icon" href="/favicon.ico">	 
     <link rel="stylesheet" type="text/css" href="/css/default.css">
     <link rel="stylesheet" type="text/css" href="/css/about.css">
 
@@ -24,7 +24,7 @@
 
     <img id="toTop" src="images/toTop.png">
 
-		 
+
 
 		<div id="main" class="clearfix">
         <section>

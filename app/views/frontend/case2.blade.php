@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>米築</title>
+	<link rel="shortcut icon" href="/favicon.ico">	 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta property="og:title" content="{{$case->title}}"></meta>
 	<meta property="og:type" content="房屋"></meta>
