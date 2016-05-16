@@ -8,9 +8,9 @@ class Post extends \Eloquent {
 
 	// Add your validation rules here
 	public static $rules = [
-		    'name' => 'required',
+		    // 'name' => 'required',
         'content' => 'required',
-        'date' => 'required|date',
+        // 'date' => 'required|date',
 	];
 
 	protected $softDelete = true;

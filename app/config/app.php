@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,13 +121,13 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		// 'Alaouy\Youtube\YoutubeServiceProvider',
+		'Alaouy\Youtube\YoutubeServiceProvider',
 		'Artdarek\OAuth\OAuthServiceProvider',
 		'Maatwebsite\Excel\ExcelServiceProvider',
 		'Yangqi\Htmldom\HtmldomServiceProvider',
 		"Intervention\Image\ImageServiceProvider",
 		'Toin0u\Geocoder\GeocoderServiceProvider',
-		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
+		// 'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
 
 	),
 
@@ -201,7 +201,7 @@ return array(
 		'Htmldom' 				=> 'Yangqi\Htmldom\Htmldom',
 		'Image' 					=> "Intervention\Image\Facades\Image",
 		'Geocoder' 		    => 'Toin0u\Geocoder\GeocoderFacade',
-		'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
+		// 'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
 
 		// 'CustomClass'     => 'custom\CustomClass',
 

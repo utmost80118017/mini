@@ -9,7 +9,7 @@
 
 
         <li  <?php if($active=="地產動態"): ?>   class="active" <?php endif; ?> ><a href="/posts">地產動態</a></li>
-         
+
         <li  <?php if($active=="rates"): ?>  class="active" <?php endif; ?> ><a href="/rates">新案訊息</a></li>
         <li  <?php if($active=="rateArea"): ?>   class="active" <?php endif; ?> ><a href="/rateAreas">新案分區選單</a></li>
         <li  style="display:none;" <?php if($active=="layout"): ?>   class="active" <?php endif; ?> ><a href="/layout">新案分區選單</a></li>
@@ -18,7 +18,7 @@
 
         <li  <?php if($active=="生活美學"): ?>   class="active" <?php endif; ?> ><a href="/decos">生活美學</a></li>
         <li  <?php if($active=="apeople"): ?>   class="active" <?php endif; ?> ><a href="/apeople">人物觀點</a></li>
-        <li style="display:none;"  <?php if($active=="關於米築"): ?>   class="active" <?php endif; ?> ><a href="/post/3?category_id=24">關於米築</a></li>
+        <li  <?php if($active=="關於米築"): ?>   class="active" <?php endif; ?> ><a href="/post/7?category_id=24">關於米築</a></li>
         <li  <?php if($active=="廣告"): ?>   class="active" <?php endif; ?> ><a href="/adlist">廣告</a></li>
 
         <li  <?php if($active=="users"): ?> class="active" <?php endif; ?> ><a href="/users">使用者</a></li>

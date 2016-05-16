@@ -46,6 +46,11 @@
 
                         if($d->from_drvice=='pc'){
                           $pc_i=$pc_i+1;
+                          if(!empty($d->content)){
+                            echo $d->content;
+                            echo "<br>";
+                          }
+
                         }else{
                           $mobile_i=$mobile_i+1;
                         }

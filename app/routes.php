@@ -1,7 +1,7 @@
 <?php
 
-Route::get('/mpage/{id}', "MultiController@content");
-Route::get('/multi_page_index', "MultiController@index");
+// Route::get('/mpage/{id}', "MultiController@content");
+// Route::get('/multi_page_index', "MultiController@index");
 
 
 Route::get('/', "FrontendController@index");
@@ -20,9 +20,9 @@ Route::get('/about', "FrontendController@about");
 // Route::get('/', "FrontendController@index");
 Route::get('/jdata', "HomeController@jdata");
 // Route::get('/food', "FrontendController@food");
-Route::get('/demo1', "FrontendController@demo1");
-Route::post('/demo1', "FrontendController@demo1");
-Route::get('/showCase/{id}', "FrontendController@showCase");
+// Route::get('/demo1', "FrontendController@demo1");
+// Route::post('/demo1', "FrontendController@demo1");
+// Route::get('/showCase/{id}', "FrontendController@showCase");
 
 
 Route::get('/search', "FrontendController@search");

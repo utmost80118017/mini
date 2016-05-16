@@ -40,11 +40,11 @@ class FrontendController extends BaseController {
 
       $data["rates"]    = Rate::all();
       # 地產動態
-      $data["one_news"] = Post::whereNotIn('id', array(3))->orderBy("prim","asc")->first();
+      $data["one_news"] = Post::whereNotIn('id', array(7))->orderBy("prim","asc")->first();
       $tpeople         =  Deco::first();
       $data["one_life"] = !empty($tpeople)?$tpeople:false;
-      $data["oabout"]   = Post::where('category_id',7)->first();
-      $about            = Post::first();
+      $data["oabout"]   = Post::where('id',7)->first();
+      $about            = Post::where('id',7)->first();
       #關於米築
       $data["about"]    = !empty($about)?$about:false;
 
@@ -61,11 +61,12 @@ class FrontendController extends BaseController {
   	}
 
     public function about(){
+
         $d=array("title"=>"about","ip"=>$_SERVER["REMOTE_ADDR"],"created_at"=>date("Y-m-d h:i:s"));
         $this->insertToExplode($d);
-
   		  $data = $this->init_date();
-        $data["post"] = Post::first();
+        $data["post"] = Post::where('id',7)->first();
+
   		  return View::make('frontend.about',$data);
   	}
 
@@ -92,10 +93,10 @@ class FrontendController extends BaseController {
 
       if(Input::get("name")){
           $name = Input::get("name");
-          $data["result_post"] = Post::where("content", 'LIKE', "%%".$name."%%")->get();
-          $data["result_people"] = People::where("content", 'LIKE', "%%".$name."%%")->get();
-          $data["result_rate"] = Rate::where("content", 'LIKE', "%%".$name."%%")->get();
-          $data["result_deco"] = Deco::where("content", 'LIKE', "%%".$name."%%")->get();
+          $data["result_post"] = Post::where("content", 'LIKE', "%%".$name."%%")->whereNotIn("id",array(7))->orderBy("updated_at","desc")->get();
+          $data["result_people"] = People::where("content", 'LIKE', "%%".$name."%%")->orderBy("updated_at","desc")->get();
+          $data["result_rate"] = Rate::where("content", 'LIKE', "%%".$name."%%")->orderBy("updated_at","desc")->get();
+          $data["result_deco"] = Deco::where("content", 'LIKE', "%%".$name."%%")->orderBy("updated_at","desc")->get();
       }else{
           $data["result_post"] = "";
           $data["result_people"] = "";
@@ -175,7 +176,7 @@ class FrontendController extends BaseController {
 
 
   		$data = $this->init_date();
-      $data["posts"] = Post::whereNotIn('id',array(3))->orderby("prim","asc")->paginate(5);
+      $data["posts"] = Post::whereNotIn('id',array(7))->orderby("prim","asc")->paginate(5);
   		return View::make('frontend.news',$data);
 
   	}

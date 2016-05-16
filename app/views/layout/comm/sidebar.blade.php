@@ -9,7 +9,7 @@
 
 
         <li  @if($active=="地產動態")   class="active" @endif ><a href="/posts">地產動態</a></li>
-         
+
         <li  @if($active=="rates")  class="active" @endif ><a href="/rates">新案訊息</a></li>
         <li  @if($active=="rateArea")   class="active" @endif ><a href="/rateAreas">新案分區選單</a></li>
         <li  style="display:none;" @if($active=="layout")   class="active" @endif ><a href="/layout">新案分區選單</a></li>
@@ -18,7 +18,7 @@
 
         <li  @if($active=="生活美學")   class="active" @endif ><a href="/decos">生活美學</a></li>
         <li  @if($active=="apeople")   class="active" @endif ><a href="/apeople">人物觀點</a></li>
-        <li style="display:none;"  @if($active=="關於米築")   class="active" @endif ><a href="/post/3?category_id=24">關於米築</a></li>
+        <li  @if($active=="關於米築")   class="active" @endif ><a href="/post/7?category_id=24">關於米築</a></li>
         <li  @if($active=="廣告")   class="active" @endif ><a href="/adlist">廣告</a></li>
 
         <li  @if($active=="users") class="active" @endif ><a href="/users">使用者</a></li>

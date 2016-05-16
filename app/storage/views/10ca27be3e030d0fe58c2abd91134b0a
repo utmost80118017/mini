@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html prefix='og: http://ogp.me/ns#'>
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	<meta charset="UTF-8">
 	<title>米築</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+	<link rel="shortcut icon" href="/favicon.ico">
 	<meta property="og:title" content="米築首頁"></meta>
 	<meta property="og:type" content="米築首頁"></meta>
 	<meta property="og:url" content="<?php echo Request::url(); ?>"></meta>
@@ -238,11 +237,13 @@
 
   <section class="row-ad">
 									<?php
-									$ad23_1 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
+									$ad23_get = AD::where("category_id",23)->orderByRaw("RAND()")->take(3)->get();
+
+									// $ad23_1 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
 									?>
-									<?php if(  !empty($ad23_1->image) AND File::exists( public_path().$ad23_1->image)  ): ?>
-											<a href="<?php echo $ad23_1->url; ?>" target="_new">
-		                    <img src="/public<?php echo $ad23_1->image; ?>"   />
+									<?php if(  !empty($ad23_get[0]->image) AND File::exists( public_path().$ad23_get[0]->image)  ): ?>
+											<a href="<?php echo $ad23_get[0]->url; ?>" target="_new">
+		                    <img src="/public<?php echo $ad23_get[0]->image; ?>"   />
 											</a>
 									<?php endif; ?>
 		</section>
@@ -250,7 +251,7 @@
     <section id="people" class="clearfix">
         <p class="summary">
             <span class="EN">PEOPLE</span>
-            <span class="CH"> / 人物觀點  </span>
+            <span class="CH"> / 人物觀點   </span>
 						<br>
 						<span class="summaryTitle" > <?php echo $people->name; ?></span>
             <span class="text">
@@ -275,11 +276,11 @@
 
 		<section class="row-ad">
 								<?php
-								$ad23_2 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
+								// $ad23_2 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
 								?>
-								<?php if(  !empty($ad23_2->image) AND File::exists( public_path().$ad23_2->image)  ): ?>
-									<a href="<?php echo $ad23_2->url; ?>"  target="_new" >
-                  		<img src="/public<?php echo $ad23_2->image; ?>"/>
+								<?php if(  !empty($ad23_get[1]->image) AND File::exists( public_path().$ad23_get[1]->image)  ): ?>
+									<a href="<?php echo $ad23_get[1]->url; ?>"  target="_new" >
+                  		<img src="/public<?php echo $ad23_get[1]->image; ?>"/>
 									</a>
 								<?php endif; ?>
 			</section>

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>米築</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="/favicon.ico">	 
+	<link rel="shortcut icon" href="/favicon.ico">
 	<meta property="og:title" content="米築首頁"></meta>
 	<meta property="og:type" content="米築首頁"></meta>
 	<meta property="og:url" content="{{Request::url()}}"></meta>
@@ -234,11 +234,13 @@
 
   <section class="row-ad">
 									<?php
-									$ad23_1 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
+									$ad23_get = AD::where("category_id",23)->orderByRaw("RAND()")->take(3)->get();
+
+									// $ad23_1 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
 									?>
-									@if(  !empty($ad23_1->image) AND File::exists( public_path().$ad23_1->image)  )
-											<a href="{{$ad23_1->url}}" target="_new">
-		                    <img src="/public{{$ad23_1->image}}"   />
+									@if(  !empty($ad23_get[0]->image) AND File::exists( public_path().$ad23_get[0]->image)  )
+											<a href="{{$ad23_get[0]->url}}" target="_new">
+		                    <img src="/public{{$ad23_get[0]->image}}"   />
 											</a>
 									@endif
 		</section>
@@ -246,7 +248,7 @@
     <section id="people" class="clearfix">
         <p class="summary">
             <span class="EN">PEOPLE</span>
-            <span class="CH"> / 人物觀點  </span>
+            <span class="CH"> / 人物觀點   </span>
 						<br>
 						<span class="summaryTitle" > {{$people->name}}</span>
             <span class="text">
@@ -271,22 +273,26 @@
 
 		<section class="row-ad">
 								<?php
-								$ad23_2 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
+								// $ad23_2 = AD::where("category_id",23)->orderByRaw("RAND()")->first();
 								?>
-								@if(  !empty($ad23_2->image) AND File::exists( public_path().$ad23_2->image)  )
-									<a href="{{$ad23_2->url}}"  target="_new" >
-                  		<img src="/public{{$ad23_2->image}}"/>
+								@if(  !empty($ad23_get[1]->image) AND File::exists( public_path().$ad23_get[1]->image)  )
+									<a href="{{$ad23_get[1]->url}}"  target="_new" >
+                  		<img src="/public{{$ad23_get[1]->image}}"/>
 									</a>
 								@endif
 			</section>
 
 
 		<div id="about" class="clearfix">
-        <div><img src="images/index/about_bg2.png"></div>
+        <div>
+					@if(  !empty($about->image) AND File::exists( public_path().$about->image)  )
+					<img src="/public{{$about->image}}">
+					@endif
+				</div>
         <p class="summary">
             <span class="EN">ABOUT US</span>
             <span class="CH"> / 關於米築</span>
-            <span class="text">ETABS是由CSI公司開發研製的房屋建築結構分析與設計軟體ETABS已有近三十年的發展歷史，是由美國乃至全球公認的高層結構計算程式，在世界範圍內廣泛應用，是房屋建築結構分析與設計軟體的業界標準。「美麗華。仁愛」主結構體耐震係數已高達0.33g經制震配置其耐震能力約提昇20%整體耐震係數提高皮國家最高標準0.33g以上。</span>
+            <span class="text">{{ms_str($about->content,200)}}</span>
             <a href="/about"><span class="link">MORE</span></a>
         </p>
     </div>

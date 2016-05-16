@@ -27,6 +27,7 @@
 				            <span>地產動態-{{$post->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($post->content,500)}}(繼續閱讀)</p>
+										<span>{{$post->created_at}}</span>
 								</a>
 		        </div>
 					@endforeach
@@ -39,6 +40,7 @@
 				            <span>人物觀點-{{$people->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($people->content,500)}}(繼續閱讀)</p>
+										<span>{{$people->created_at}}</span>
 								</a>
 		        </div>
 					@endforeach
@@ -52,6 +54,7 @@
 				            <span>新案訊息-{{$rate->title}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($rate->content,500)}}(繼續閱讀)</p>
+										<span>{{$rate->created_at}}</span>
 								</a>
 		        </div>
 					@endforeach
@@ -64,6 +67,7 @@
 				            <span>生活美學-{{$deco->name}}</span>
 				            <img src="/images/search/tri.png">
 				            <p>{{ms_str($deco->content,500)}}(繼續閱讀)</p>
+										<span>{{$deco->created_at}}</span>
 								</a>
 		        </div>
 					@endforeach

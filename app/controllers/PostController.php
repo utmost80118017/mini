@@ -26,7 +26,7 @@ class PostController extends BaseController {
 
           $cate_array = array();
           $data["cates"] = $cate_array;
-          $data["result"] = Post::whereNotIn('id',array(3))->orderby("prim","asc")
+          $data["result"] = Post::whereNotIn('id',array(7))->orderby("prim","asc")
                                     ->paginate(10);
 
     		  return View::make('admin.posts.index',$data);
@@ -129,7 +129,13 @@ class PostController extends BaseController {
         if ( $validator->passes() ) {
                 Post::where('id', $id)->update($update_array);
                 $this->do_prim($id);
-                return Redirect::to('/posts');
+
+                if($id==7){
+                    return Redirect::to('/post/'.$id );
+                }else{
+                    return Redirect::to('/posts');
+                }
+
         }else{
                 return Redirect::to('/post/'.$id )->withErrors($validator);
         }
@@ -173,7 +179,7 @@ class PostController extends BaseController {
           $cate_array=$this->cate_init();
           $data["_title"] = array("top"=>"編輯-地產動態","main"=>"Home","sub"=>"post");
 
-          if($id==25){
+          if($id==7){
               $data["active"] = "關於米築";
           }elseif($id==5){
               $data["active"] = "生活美學";
@@ -190,7 +196,7 @@ class PostController extends BaseController {
 
 
           $data["cates"] = Cate::where('type','最新消息')->get()->toArray();
-          if($id==3){
+          if($id==7){
               return View::make('admin.about',$data);
           }else{
               return View::make('admin.posts.edit',$data);

@@ -18,6 +18,6 @@ CKEDITOR.editorConfig = function( config ) {
 FCKConfig.ImageBrowser = true ;
 FCKConfig.ImageBrowserURL = '[Path to Filemanager]/index.html' ;
 	// Define changes to default configuration here. For example:
-	//  config.language = 'en';
+	//  config.language = 'zh-tw';
 	//  config.uiColor = '#AADC6E';
 };
