@@ -31,9 +31,9 @@
             <p>ABOUT US</p>
             <span>關於米築</span>
 
-            {{$post->content}}
-        </section>
 
+        </section>
+				{{$post->content}}
 
 
     </div>

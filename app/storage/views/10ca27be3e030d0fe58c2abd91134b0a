@@ -287,11 +287,15 @@
 
 
 		<div id="about" class="clearfix">
-        <div><img src="images/index/about_bg2.png"></div>
+        <div>
+					<?php if(  !empty($about->image) AND File::exists( public_path().$about->image)  ): ?>
+					<img src="/public<?php echo $about->image; ?>">
+					<?php endif; ?>
+				</div>
         <p class="summary">
             <span class="EN">ABOUT US</span>
             <span class="CH"> / 關於米築</span>
-            <span class="text">ETABS是由CSI公司開發研製的房屋建築結構分析與設計軟體ETABS已有近三十年的發展歷史，是由美國乃至全球公認的高層結構計算程式，在世界範圍內廣泛應用，是房屋建築結構分析與設計軟體的業界標準。「美麗華。仁愛」主結構體耐震係數已高達0.33g經制震配置其耐震能力約提昇20%整體耐震係數提高皮國家最高標準0.33g以上。</span>
+            <span class="text"><?php echo ms_str($about->content,200); ?></span>
             <a href="/about"><span class="link">MORE</span></a>
         </p>
     </div>
