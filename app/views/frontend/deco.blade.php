@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>米築</title>
- <link rel="shortcut icon" href="/favicon.ico">	 
+ <link rel="shortcut icon" href="/favicon.ico">
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="stylesheet" type="text/css" href="/css/default.css">
@@ -45,7 +45,7 @@
 						<p>DECO</p>
 						<span>生活美學</span>
 
-						<div style="">
+						<div class="deco_list">
 								<?php
 
                 $deco_type=array();
@@ -55,18 +55,21 @@
                 }
 
                 $type_decos=Deco::groupBy("type")->take(5)->get();
-
+                // echo $type;
                 ?>
                   @foreach($type_decos as $type_row)
-                      @if(!empty($type_row->type))
 
-                        <a href="/deco?type={{$type_row->type}}">
 
-      										    <span style="background-color:#A4A4A4;">{{$type_row->type}}</span>
 
-                        </a>
+                            <a href="/deco?type={{$type_row->type}}"
+                              @if(!empty($type_row->type) AND ($type_row->type==$type) )
+                               class="thisPage"
+                              @endif
+                              >
+          										    {{$type_row->type}}
+                            </a>
 
-                      @endif
+
                   @endforeach
 						</div>
 

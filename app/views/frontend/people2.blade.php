@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>米築</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="/favicon.ico">	 
+	<link rel="shortcut icon" href="/favicon.ico">
 	<meta property="og:title" content="{{$people->name}}"></meta>
 	<meta property="og:type" content="地產動態"></meta>
 	<meta property="og:url" content="{{Request::url()}}"></meta>
@@ -45,7 +45,7 @@
         width: 30%;
     }
     .people .intro{
-        float: left;
+        float: right;
         width: 60%;
         padding: 0 5%;
         text-align: left;
@@ -57,7 +57,7 @@
     }
     .intro .subTitle{
         display: inline-block;
-        margin: 20px 0;
+        margin: 10px 0;
         width: 100%;
         color: #b28850;
         font-size: 18px;

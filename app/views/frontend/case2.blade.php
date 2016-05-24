@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>米築</title>
-	<link rel="shortcut icon" href="/favicon.ico">	 
+	<link rel="shortcut icon" href="/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta property="og:title" content="{{$case->title}}"></meta>
 	<meta property="og:type" content="房屋"></meta>
@@ -211,7 +211,30 @@
 
 				</p>
         <p id="intro">
-            {{$case->content}}
+						<span>
+	            <?php
+							// $cc=explode( "<p>" ,$case->content);
+							// // echo count($cc);
+							// $html='';
+							//
+							// foreach($cc as  $a){
+							// 	$html.=$a;
+							// }
+							// echo $html;
+							$html = new \Htmldom($case->content);
+							foreach($html->find('p') as $element)
+							       echo $element->plaintext. '<br>';
+
+							// $html1="";
+							// $cc1 = explode( "</p>" , $html);
+							// foreach($cc1 as  $aa){
+							// 	$html1.=$aa;
+							// }
+							// echo $html;
+
+							// $cc=explode( "<p>" ,$case->content);
+							?>
+						</span>
         </p>
 
         <div id="info" class="clearfix">
@@ -223,7 +246,7 @@
                 <li>戶數：{{$case->households}}</li>
                 <li>坪數：{{$case->floorNumber}}</li>
                 <li>格局：{{$case->pattern}}</li>
-                <li></li>
+                 
             </ul>
             <ul>
                 <li>公設比：{{$case->postulate}}</li>

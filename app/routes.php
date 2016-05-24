@@ -346,3 +346,14 @@ Route::get('/recodeAd', function(){
 
 
 });
+
+
+
+Route::get('/peoqqqqq', function(){
+ $rr=Rate::first();
+
+
+$html = new \Htmldom($rr->content);
+foreach($html->find('p') as $element)
+       echo $element->plaintext. '<br>';
+});

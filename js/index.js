@@ -46,4 +46,7 @@ $(document).ready(function(){
 		$("#case button").toggleClass("close");
 	});
 
+	$("#case .slick").hover(function(){
+		$("#prev , #next").toggleClass("move");
+	});
 });

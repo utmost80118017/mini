@@ -12,13 +12,10 @@
 }
 
 .flex-control-paging li a{
-	background-color: #000;
-	border-radius: 0;
+	background-color: rgba(0,0,0,0.5);
 }
 .flex-control-paging li a.flex-active{
 	background-color: #700 !important;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
 }
 
 .mainPic{
@@ -40,7 +37,7 @@
 	font-size: 28px;
 }
 #subTitle{
-	margin: 20px 0;
+	margin: 20px 0 10px;
 	color: #690;
 	font-weight: bold;
 	font-size: 18px;
@@ -57,7 +54,7 @@
 }
 #intro span{
 	display: inline-block;
-	margin: 20px 0;
+	margin: 10px 0;
 	letter-spacing: 1px;
 	line-height: 28px;
 	text-align: justify;
@@ -102,9 +99,6 @@ aside{
 	padding: 0 3%;
 }
 
-.slick3 .area a {
-    color: #FFF;
-}
 
 @media (max-width: 980px){
 
@@ -121,10 +115,14 @@ aside{
 @media (max-width: 480px){
 
 #info ul:nth-child(2) , #info ul:nth-child(3){
-	margin: 10px 0;
+	margin: 0;
 	width: 96%;
 	border: none;
 	padding: 0;
+}
+#info ul li{
+	margin: 0;
+	padding: 5px 0;
 }
 #info img{
 	float: none;

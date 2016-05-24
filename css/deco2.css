@@ -12,7 +12,7 @@
 
 #main section{
 	background-color: #fefcfa;
-	padding: 3%;
+	padding: 3% 3% 0;
 	font-size: 18px;
 }
 #main section p{
@@ -24,7 +24,7 @@
 	letter-spacing: 1px;
 }
 #main section span{
-	background-color: #7e6b5a;	
+	background-color: #7e6b5a;
 	padding: 3px 19px;
 	color: #FFF;
 }

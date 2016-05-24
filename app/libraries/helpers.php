@@ -124,7 +124,7 @@ function rate_info($rate_date){
   if(strlen($rate_date->pattern)>1)
       $html.="<li>格局：".$rate_date->pattern."</li>";
 
-  $html.="<li></li>";
+ 
   $html.="</ul>";
   $html.="<ul>";
   /*

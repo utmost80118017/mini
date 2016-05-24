@@ -8,6 +8,13 @@
 	margin-right: 5px;
 	font-weight: bold;
 }
+#main section .deco_list a{
+	margin: 0 5px;
+	font-size: 18px;
+}
+#main section .deco_list a:hover , #main section .deco_list a.thisPage{
+	font-weight: bold;
+}
 .deco{
 	position: relative;
 	margin: 10px 0;
