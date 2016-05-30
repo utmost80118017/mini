@@ -57,7 +57,11 @@ class UserController extends BaseController {
     	}
 
       public function explode(){
-
+          
+          // if ($load[0] > 0.80) {
+          //     header('HTTP/1.1 503 Too busy, try again later');
+          //     die('Server too busy. Please try again later.');
+          // }
           $data["_title"] = array("top"=>"瀏覧人數","main"=>"Home","sub"=>"explode");
           $data["active"] = "explode";
           $data["users"] = User::paginate(5);

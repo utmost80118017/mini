@@ -13,9 +13,14 @@
 <div class="btn-toolbar">
 
   <div class="btn-group">
+
   </div>
 </div>
 <div class="well">
+  <?php
+  $load = sys_getloadavg();
+  print_r($load);
+  ?>
     <table class="table table-striped">
       <thead>
         <tr>

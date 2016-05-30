@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>米築</title>
-	<link rel="shortcut icon" href="/favicon.ico">	 
+	<link rel="shortcut icon" href="/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<meta property="og:title" content="{{$deco->name}}"></meta>
@@ -54,18 +54,18 @@
 					<div class="articleControllerList">
 							@if($deco->videoLink)
 								<a href="{{$deco->videoLink}}" target="_new" >
-										<img src="/images/case/icon4.png">
+										<img src="/images/case/icon4.png" style="width:35px;">
 								</a>
 							@endif
 
 							@if($deco->vr360Link)
 								<a href="{{$deco->vr360Link}}"  target="_new" >
-									<img src="/images/case/icon3.png">
+									<img src="/images/case/icon3.png"  style="width:35px;">
 								</a>
 							@endif
 
 							<a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));"  target="_new" >
-									<img src="/images/case/icon2.png">
+									<img src="/images/case/icon2.png"  style="width:35px;">
 							</a>
 
 
@@ -73,7 +73,7 @@
 
 
 							<a href="http://line.naver.jp/R/msg/text/?{{$deco->name}}%0D%0A{{Request::url()}}" rel="nofollow" >
-								<img src="/images/case/icon1.png"   alt="用LINE傳送" />
+								<img src="/images/case/icon1.png"   alt="用LINE傳送"   style="width:35px;"/>
 							</a>
 
 

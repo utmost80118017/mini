@@ -118,7 +118,7 @@ class RateController extends BaseController {
                }
 
                $this->do_prim($rate->id);
-               $this->update_xm_ym(Input::get("address"),$rate->id);
+              //  $this->update_xm_ym(Input::get("address"),$rate->id);
 
 
                return Redirect::to('rates')->withInput()->with('success', '新增成功');
@@ -212,7 +212,7 @@ class RateController extends BaseController {
                                                              'choice'=>$choice,
                                                              'address'=>Input::get("address")));
 
-                        $this->update_xm_ym($address,$id);
+                        // $this->update_xm_ym($address,$id);
                         $this->update_rate_image($id , Input::file('images'));
                         $this->do_prim($id);
 
@@ -253,7 +253,7 @@ class RateController extends BaseController {
                                                      'choice'=>$choice,
                                                      'address'=>Input::get("address")));
                 $this->do_prim($id);
-                $this->update_xm_ym($address,$id);
+                // $this->update_xm_ym($address,$id);
              }
 
              return Redirect::to('rates')->withInput()->with('success', '更新成功');
@@ -379,7 +379,7 @@ class RateController extends BaseController {
 
 
       public function update_rate_image($rate_id , $images){
-         
+
         foreach($images as $file){
 
           try {

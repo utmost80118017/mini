@@ -7,13 +7,15 @@
 
 
 
-                 
 
-                <form method="post" action="/search">
-                    <input type="text" name="name" placeholder="SEARCH" />
-                    <img src="/images/search_icon.png">
-                </form>
+              <div class="">
 
+
+                  <form method="post" action="/search">
+                      <input type="text" name="name" placeholder="SEARCH" />
+                      <img src="/images/search_icon.png">
+                  </form>
+                </div>
 
           </div>
       </section>

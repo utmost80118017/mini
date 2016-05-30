@@ -3,6 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>米築</title>
+ <link rel="shortcut icon" href="/favicon.ico">
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<link rel="stylesheet" type="text/css" href="/css/default.css">
@@ -44,25 +45,32 @@
 						<p>DECO</p>
 						<span>生活美學</span>
 
-						<div style="">
+						<div class="deco_list">
 								<?php
-                $deco_type=array();
-                foreach($decos as $deco_row){
-                  $deco_type[]=$deco_row->id;
-                }
-                $type_decos=Deco::whereIn('id', $deco_type)->groupBy("type")->get();
 
+                $deco_type=array();
+
+                foreach($decos as $deco_row){
+                    $deco_type[]=$deco_row->id;
+                }
+
+                $type_decos=Deco::groupBy("type")->take(5)->get();
+                // echo $type;
                 ?>
                   <?php foreach($type_decos as $type_row): ?>
-                      <?php if(!empty($type_row->type)): ?>
 
-                        <a href="/deco?type=<?php echo $type_row->type; ?>">
-                          <select id="deco_sel" class="<?php echo $type_row->type; ?>">
-      										    <option><?php echo $type_row->type; ?></option>
-                          </select>
-                        </a>
 
-                      <?php endif; ?>
+
+                            <a href="/deco?type=<?php echo $type_row->type; ?>"
+                              <?php if(!empty($type_row->type) AND ($type_row->type==$type) ): ?>
+                               class="thisPage"
+                              <?php endif; ?>
+                              >
+          										    <?php echo $type_row->type; ?>
+
+                            </a>
+
+
                   <?php endforeach; ?>
 						</div>
 

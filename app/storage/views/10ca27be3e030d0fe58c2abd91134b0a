@@ -48,9 +48,10 @@
 						<div id="logo"><a href="/index"><img src="/images/index/logo.png"></a></div>
 						<div id="slogan">
 								<img src="/images/index/slogan.png">
-								<img src="/images/index/fb_icon.png">
+
 								<div>
 									<form method="post" action="/search">
+											<img src="/images/index/fb_icon.png">
 	                    <input type="text" name="name" placeholder="SEARCH" />
 	                    <img src="/images/search_icon.png">
 	                </form>

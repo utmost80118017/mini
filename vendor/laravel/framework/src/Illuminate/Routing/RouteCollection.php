@@ -130,8 +130,7 @@ class RouteCollection implements Countable, IteratorAggregate {
 		// by the consumer. Otherwise we will check for routes with another verb.
 		$route = $this->check($routes, $request);
 
-		if ( ! is_null($route))
-		{
+		if ( ! is_null($route)){
 			return $route->bind($request);
 		}
 
